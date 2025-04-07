@@ -1,8 +1,17 @@
 # MCP Server
 
+![mcp-design](mcp-design.png)
+
 ### Resumo dos Principais Aspectos do Model Context Protocol (MCP)
 
 O **Model Context Protocol (MCP)**, introduzido pela Anthropic, é um padrão aberto que visa conectar assistentes de IA aos sistemas onde os dados residem, como repositórios de conteúdo, ferramentas de negócios e ambientes de desenvolvimento. Seu objetivo é melhorar a relevância e a qualidade das respostas dos modelos de IA, superando as limitações impostas pelo isolamento de dados em silos e sistemas legados. O MCP substitui integrações fragmentadas por um protocolo universal, permitindo que sistemas de IA acessem dados de forma mais simples, segura e escalável.
+
+### Conexões com o projeto PortalChatbot: 
+
+- Problemas do projeto: Autenticação de usuario/seção, Como servir os componentes do sistema em produção.
+- Definir quais os ganhos necessários para o projeto quando se usa um `MCP Server`.
+- Porque pode funcionar? Casos de uso no projeto?
+
 
 #### Principais Aspectos do MCP
 1. **Conexão Universal**: O MCP atua como uma ponte entre fontes de dados e ferramentas de IA, eliminando a necessidade de conectores personalizados para cada sistema.
