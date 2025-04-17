@@ -30,25 +30,15 @@ class Gemini():
         """__summary__
         
         Args:
-            prompt (str): O prompt para o modelo
-            temperature (float, optional): Temperatura para controlar aleatoriedade. Defaults to 0.7.
-            max_tokens (int, optional): Número máximo de tokens na resposta. Defaults to 1024.
+            prompt (str): User prompt 
             
         Returns:
-            dict: Resposta do modelo, formatada de acordo com o schema quando disponível
+            response (ModelOutput): Response from Gemini API
         """
         if self.system_instruction:
             generation_config = {
-                "temperature": temperature,
-                "max_output_tokens": max_tokens,
                 "system_instruction": self.system_instruction
             }
-        else:
-            generation_config = {
-                "temperature": temperature,
-                "max_output_tokens": max_tokens
-            }
-        
         response = self.client.generate_content(
             prompt,
             generation_config=generation_config
